@@ -1,0 +1,44 @@
+---
+import Layout from '@layouts/Base.astro'
+const { seo } = Astro.props.frontmatter
+
+import Heading from '@components/micro/content/Heading.svelte'
+import Text from '@components/micro/content/Text.svelte'
+---
+
+<Layout {seo}>
+  <div class="flex flex-col gap-2 items-start p-10">
+    <Heading variant="h1">Lorem ipsum dolor sit amet.</Heading>
+    <Heading variant="h2">Lorem ipsum dolor sit amet.</Heading>
+    <Heading variant="h3">Lorem ipsum dolor sit amet.</Heading>
+    <Heading variant="h4">Lorem ipsum dolor sit amet.</Heading>
+    <Heading variant="h5">Lorem ipsum dolor sit amet.</Heading>
+    <Heading variant="h6">Lorem ipsum dolor sit amet.</Heading>
+
+    <!-- <Text size="xs">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat ratione
+      accusantium incidunt, eligendi ad sunt voluptatibus maxime exercitationem
+      suscipit itaque!</Text
+    >
+    <Text size="sm">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat ratione
+      accusantium incidunt, eligendi ad sunt voluptatibus maxime exercitationem
+      suscipit itaque!</Text
+    > -->
+    <Text size="md">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat ratione
+      accusantium incidunt, eligendi ad sunt voluptatibus maxime exercitationem
+      suscipit itaque!</Text
+    >
+    <!-- <Text size="lg">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat ratione
+      accusantium incidunt, eligendi ad sunt voluptatibus maxime exercitationem
+      suscipit itaque!</Text
+    >
+    <Text size="xl">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat ratione
+      accusantium incidunt, eligendi ad sunt voluptatibus maxime exercitationem
+      suscipit itaque!</Text
+    > -->
+  </div>
+</Layout>

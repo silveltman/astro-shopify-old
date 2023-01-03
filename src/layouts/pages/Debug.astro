@@ -1,0 +1,14 @@
+---
+import Layout from '@layouts/Base.astro'
+const { seo } = Astro.props.frontmatter
+
+import HeroFilled from '@components/macro/hero/HeroFilled.svelte'
+import HeroBoxed from '@components/macro/hero/HeroBoxed.svelte'
+import HeroSplit from '@components/macro/hero/HeroSplit.svelte'
+---
+
+<Layout {seo}>
+  <HeroFilled />
+  <HeroBoxed />
+  <HeroSplit />
+</Layout>

@@ -1,0 +1,32 @@
+---
+import GoogleFonts from './GoogleFonts.astro'
+// import Favicon from "./Favicon.astro";
+
+import { SEO } from 'astro-seo'
+import globalSEO from '@data/SEO.yaml'
+const localSEO = Astro.props.seo
+
+Object.keys(localSEO).forEach((key) => {
+  if (localSEO[key] === null) {
+    delete localSEO[key]
+  }
+})
+
+const mergedSEO = { ...globalSEO, ...localSEO }
+---
+
+<head>
+  <meta charset="utf-8" />
+  <meta
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+    name="viewport"
+  />
+  <meta
+    name="generator"
+    content={Astro.generator}
+  />
+
+  <SEO {...mergedSEO} />
+  <GoogleFonts />
+  <!-- <Favicon /> -->
+</head>

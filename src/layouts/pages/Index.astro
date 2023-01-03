@@ -1,0 +1,93 @@
+---
+import Layout from '@layouts/Base.astro'
+const { seo } = Astro.props.frontmatter
+
+import Switch from '@components/micro/inputs/Switch.svelte'
+import Button from '@components/micro/inputs/Button.svelte'
+import TextField from '@components/micro/inputs/TextField.svelte'
+import IconButton from '@components/micro/inputs/IconButton.svelte'
+import Select from '@components/micro/inputs/Select.svelte'
+import TextArea from '@components/micro/inputs/TextArea.svelte'
+import Box from '@components/layout/Box.svelte'
+
+// const { img } = await renderImg({
+//   src: 'https://picsum.photos/1024/768',
+//   alt: 'A random image',
+// })
+---
+
+<Layout {seo}>
+  <div class="flex flex-col gap-2 items-start p-10">
+    <Switch
+      client:load
+      size="sm"
+    />
+    <Switch
+      client:load
+      size="md"
+    />
+    <Switch
+      client:load
+      size="lg"
+    />
+
+    <Button
+      variant="primary"
+      startIcon="home"
+      size="sm"
+      >Test</Button
+    >
+    <Button
+      variant="secondary"
+      startIcon="search"
+      size="md"
+      >Test</Button
+    >
+    <Button
+      variant="tertiary"
+      startIcon="search"
+      size="lg"
+      >Terug</Button
+    >
+    <IconButton
+      icon="search"
+      size="sm"
+      >Test</IconButton
+    >
+    <IconButton
+      icon="home"
+      size="md"
+      >Test</IconButton
+    >
+    <IconButton
+      icon="home"
+      size="lg"
+      >Test</IconButton
+    >
+    <TextField size="sm" />
+    <TextField size="md" />
+    <TextField size="lg" />
+    <Select size="sm" />
+    <Select size="md" />
+    <Select size="lg" />
+
+    <TextArea size="sm" />
+    <TextArea size="md" />
+    <TextArea size="lg" />
+    <Box size="sm">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, hic.
+      </p>
+    </Box>
+    <Box size="md">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, hic.
+      </p>
+    </Box>
+    <Box size="lg">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, hic.
+      </p>
+    </Box>
+  </div>
+</Layout>

@@ -1,0 +1,16 @@
+---
+import Layout from '@layouts/Base.astro'
+const { seo } = Astro.props.frontmatter
+
+import CarouselNew from '@components/meso/CarouselNew.svelte'
+
+const images = [
+  { src: 'image1.jpg', alt: 'image 1' },
+  { src: 'image2.jpg', alt: 'image 2' },
+  { src: 'image3.jpg', alt: 'image 3' },
+]
+---
+
+<Layout {seo}>
+  <!-- <CarouselNew /> -->
+</Layout>
