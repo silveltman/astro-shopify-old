@@ -1,5 +1,5 @@
 ---
-layout: '@layouts/pages/Type.astro'
+layout: '@layouts/pages/Shopify.astro'
 seo:
     title: 
     description:

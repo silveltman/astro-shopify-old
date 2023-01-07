@@ -1,13 +1,15 @@
 <script lang="ts">
-  export let ratio: number = 1
-  const padding = `${(1 / ratio) * 100}%`
+  export let orientation: 'portrait' | 'landscape' | 'square' = 'square'
 </script>
 
 <div
-  class="w-full relative"
-  style="padding-top: {padding};"
+  class="w-full relative
+  {orientation === 'portrait' && 'aspect-w-2 aspect-h-3'}
+  {orientation === 'landscape' && 'aspect-w-4 aspect-h-3'}
+  {orientation === 'square' && 'aspect-w-1 aspect-h-1'}
+  "
 >
-  <div class="absolute inset-0">
+  <div>
     <slot />
   </div>
 </div>

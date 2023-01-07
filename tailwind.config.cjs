@@ -31,7 +31,7 @@ module.exports = {
 				DEFAULT: '1rem',
 				'xs': '0.25rem',
 				'sm': '0.5rem',
-				'base': '1rem',
+				'md': '1rem',
 				'lg': '2rem',
 				'xl': '4rem',
 				'2xl': '6rem',

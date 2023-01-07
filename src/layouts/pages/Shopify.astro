@@ -1,0 +1,24 @@
+---
+import CardCollection from '@components/meso/card/CardCollection.svelte'
+import CardProduct from '@components/meso/card/CardProduct.svelte'
+import Layout from '@layouts/Base.astro'
+const { seo } = Astro.props.frontmatter
+
+import { getCollections, getProducts } from 'public/shopify'
+
+let collections = await getCollections()
+// console.log(collections[0].image.type)
+
+let products = await getProducts()
+// console.log(products[0].images[0])
+let { price, priceV2, unitPrice, unitPriceMeasurement } =
+  products[0].variants[0]
+console.log(products[0].variants[0].url)
+---
+
+<Layout {seo}>
+  <div class="flex flex-col max-w-lg">
+    <CardCollection collection={collections[0]} />
+    <CardProduct product={products[0]} />
+  </div>
+</Layout>

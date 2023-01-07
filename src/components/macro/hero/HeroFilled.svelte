@@ -2,7 +2,7 @@
   import Section from '@components/layout/Section.svelte'
   import Container from '@components/layout/Container.svelte'
   import Align from '@components/layout/Align.svelte'
-  import Content from '@components/meso/ContentPrimary.svelte'
+  // import Content from '@components/meso/ContentPrimary.svelte'
 
   export let align: 'left' | 'center' | 'right' = 'center'
 </script>
@@ -15,7 +15,7 @@
   />
   <Container>
     <Align {align}>
-      <Content {align} />
+      <!-- <Content {align} /> -->
     </Align>
   </Container>
 </Section>

@@ -1,12 +1,31 @@
 <script lang="ts">
-  import { onMount } from 'svelte'
-  import Button from '@components/micro/inputs/Button.svelte'
-  export let size: 'sm' | 'md' | 'lg' = 'sm'
+  import { inview } from 'svelte-inview'
+  import IconButton from '@components/micro/inputs/IconButton.svelte'
+  import CardProduct from '@components/meso/card/CardProduct.svelte'
+
+  export let size: 'sm' | 'md' | 'lg' = 'md'
+  export let space: 'none' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' = 'md'
+  export let items = []
+
+  export let cardVariant: 'product' | 'collection' = 'collection'
 
   let slider
-
   let atStart = true
   let atEnd = false
+
+  const options = {
+    root: slider,
+    threshold: 0.99,
+  }
+
+  function onChange(event, i) {
+    const { inView } = event.detail
+    if (i == 0) {
+      atStart = inView
+    } else if (i == items.length - 1) {
+      atEnd = inView
+    }
+  }
 
   function scroll(direction: -1 | 1) {
     const { offsetWidth } = slider
@@ -17,109 +36,133 @@
       behavior: 'smooth',
     })
   }
-
-  // let observer = new IntersectionObserver((entries) => {
-  // console.log(entries)
-  // if (entries[0].isIntersecting) console.log("first intersecting");
-  // if (entries[-0].isIntersecting) console.log("second intersecting");
-  // })
-
-  // onMount(() => {
-  //   const items = slider.querySelectorAll('li')
-  //   console.log(items)
-  //   observer.observe(items[0])
-  //   observer.observe(items.slice(-1)[0])
-  // })
 </script>
 
 <div class="relative">
-  <div class="absolute top-0 left-0 z-10 flex items-center h-full p-2">
-    <Button
-      disabled={atStart}
-      icon="chevron_left"
-      variant="secondary"
-      on:click={() => scroll(-1)}
-    />
-  </div>
-  <div class="">
-    <div
-      bind:this={slider}
-      class="slider flex w-full relative overflow-x-scroll snap-x snap-mandatory [&>*]:shrink-0 [&>*]:snap-start"
-      class:sm={size === 'sm'}
-      class:md={size === 'md'}
-      class:large={size === 'lg'}
-    >
-      <slot />
+  {#if !atStart || !atEnd}
+    <div class="absolute top-0 left-0 z-10 flex items-center h-full p-2">
+      <IconButton
+        disabled={atStart}
+        icon="chevron_left"
+        variant="secondary"
+        on:click={() => scroll(-1)}
+      />
     </div>
-  </div>
+  {/if}
 
-  <div class="absolute top-0 right-0 z-10 flex items-center h-full p-2">
-    <Button
-      disabled={atEnd}
-      icon="chevron_right"
-      variant="secondary"
-      on:click={() => scroll(1)}
-    />
-  </div>
+  <ul
+    bind:this={slider}
+    class="flex w-full overflow-x-auto snap-x snap-mandatory gap-x-10 scrollbar-thin scrollbar-track-gray-300 scrollbar-thumb-gray-500 space-{space}"
+    class:pb={!atStart || !atEnd}
+  >
+    {#each items as item, i}
+      {#if i == 0 || i == items.length - 1}
+        <li
+          use:inview={options}
+          on:change={(event) => onChange(event, i)}
+          class="snap-start shrink-0 size-{size}"
+        >
+          <CardProduct content={item} />
+        </li>
+      {:else}
+        <li class="snap-start shrink-0 size-{size}">
+          <CardProduct content={item} />
+        </li>
+      {/if}
+    {/each}
+  </ul>
+
+  {#if !atStart || !atEnd}
+    <div class="absolute top-0 right-0 z-10 flex items-center h-full p-2">
+      <IconButton
+        disabled={atEnd}
+        icon="chevron_right"
+        variant="secondary"
+        on:click={() => scroll(1)}
+      />
+    </div>
+  {/if}
 </div>
 
-<style global>
-  .slider {
-    --gap: 16px; /* gap-x-4 */
+<style>
+  .size-sm {
+    min-width: 128px;
+    --items: 3;
+    @media screen(sm) {
+      --items: 4;
+    }
+    @media screen(md) {
+      --items: 5;
+    }
+    @media screen(lg) {
+      --items: 6;
+    }
+  }
 
-    &.sm li {
-      min-width: 128px;
+  .size-md {
+    --items: 2;
+    min-width: 288px;
+
+    @media screen(sm) {
       --items: 3;
-      @media screen(sm) {
-        --items: 4;
-      }
-      @media screen(md) {
-        --items: 5;
-      }
-      @media screen(lg) {
-        --items: 6;
-      }
+      min-width: 0;
     }
-
-    &.md li {
-      min-width: 288px;
-      --items: 2;
-
-      @media screen(sm) {
-        --items: 3;
-      }
-      @media screen(md) {
-        --items: 4;
-      }
-      @media screen(lg) {
-        --items: 5;
-      }
+    @media screen(md) {
+      --items: 4;
     }
+    @media screen(lg) {
+      --items: 5;
+    }
+  }
 
-    &.large li {
+  .size-lg {
+    --items: 1;
+    @media screen(sm) {
       --items: 1;
-
-      @media screen(sm) {
-        --items: 1;
-      }
-      @media screen(md) {
-        --items: 2;
-      }
-      @media screen(lg) {
-        --items: 3;
-      }
     }
-
-    /* ------------------------------------------------ */
-    /* AUTO */
-    /* ------------------------------------------------ */
-    li {
-      /* (items - 1) * gap */
-      --total-gap: calc(var(--gap) * (var(--items) - 1));
-      /* (Full width - total-gap) / items */
-      --width: calc((100% - var(--total-gap)) / var(--items));
-      width: var(--width);
+    @media screen(md) {
+      --items: 2;
     }
-    column-gap: var(--gap);
+    @media screen(lg) {
+      --items: 3;
+    }
+  }
+
+  .space-xs {
+    --space: theme(spacing.xs);
+  }
+
+  .space-sm {
+    --space: theme(spacing.sm);
+  }
+
+  .space-md {
+    --space: theme(spacing.md);
+  }
+
+  .space-lg {
+    --space: theme(spacing.lg);
+  }
+
+  .space-xl {
+    --space: theme(spacing.xl);
+  }
+
+  .space-2xl {
+    --space: theme(spacing.2xl);
+  }
+
+  .space-none {
+    --space: theme(spacing.0);
+  }
+
+  ul {
+    column-gap: var(--space);
+  }
+
+  li {
+    --total-space: calc((var(--items) - 1) * var(--space));
+    --width: calc((100% - var(--total-space)) / var(--items));
+    width: var(--width);
   }
 </style>

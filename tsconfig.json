@@ -11,12 +11,25 @@
     "esModuleInterop": true,
     "jsx": "preserve",
     "baseUrl": ".",
+    "types": [
+      "@astrojs/image/client"
+    ],
     "paths": {
-      "@components/*": ["src/components/*"],
-      "@layouts/*": ["src/layouts/*"],
-      "@data/*": ["src/data/*"],
-      "@pages/*": ["src/pages/*"],
-      "@assets/*": ["public/assets/*"]
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@layouts/*": [
+        "src/layouts/*"
+      ],
+      "@data/*": [
+        "src/data/*"
+      ],
+      "@pages/*": [
+        "src/pages/*"
+      ],
+      "@assets/*": [
+        "public/assets/*"
+      ]
     }
   },
   "extends": "astro/tsconfigs/base"

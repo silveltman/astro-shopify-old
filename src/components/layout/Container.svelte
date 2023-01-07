@@ -27,8 +27,6 @@
         {disablePadding == '2xl' && 'max-2xl:!px-0'}
         {disablePadding == '3xl' && 'max-3xl:!px-0'}
 
-
-
         {fixed && 'container'}
 
         {maxWidth == 'sm' && 'max-w-screen-sm'}
@@ -37,7 +35,6 @@
         {maxWidth == 'xl' && 'max-w-screen-xl'}
         {maxWidth == '2xl' && 'max-w-screen-2xl'}
         {maxWidth == '3xl' && 'max-w-screen-3xl'}
-
 
         {className}
     "

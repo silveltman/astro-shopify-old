@@ -2,9 +2,11 @@
   import Section from '@components/layout/Section.svelte'
   import Container from '@components/layout/Container.svelte'
   import Align from '@components/layout/Align.svelte'
-  import Content from '@components/meso/ContentPrimary.svelte'
+  // import Content from '@components/meso/ContentPrimary.svelte'
 
   export let align: 'left' | 'center' | 'right' = 'left'
+
+  export let content: object = null
 </script>
 
 <Section>
@@ -17,7 +19,10 @@
         src="https://picsum.photos/1024/768"
         alt=""
       />
-      <Content {align} />
+      <!-- <Content
+        {content}
+        {align}
+      /> -->
     </Align>
   </Container>
 </Section>
