@@ -1,5 +1,4 @@
 paths:
-  uploads: assets/img/uploads
   timezone: Europe/Amsterdam
 
 # -----------------------------------------------
