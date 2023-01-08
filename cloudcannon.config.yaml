@@ -1,5 +1,6 @@
 paths:
-  timezone: Europe/Amsterdam
+  uploads: assets/uploads
+  dam_uploads: raw
 
 # -----------------------------------------------
 # Cloudcannn sidebar configuration
