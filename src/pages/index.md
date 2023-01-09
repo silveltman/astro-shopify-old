@@ -7,7 +7,42 @@ image: >-
     https://images.unsplash.com/photo-1673117921063-5dde75f25a81?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=898&q=80
 image2:
 menu_items:
-
+    -
+        name: Home
+        href: /
+    -
+        name: Swimwear
+        collection: swimwear
+    -
+        name: Men
+        lists:
+            -
+                name: Collections
+                links:
+                    -
+                        name: Sleep
+                        collection: sleep
+                    -
+                        name: Swimwear
+                        collection: swimwear
+                    -
+                        name: Underwear
+                        collection: underwear
+            -
+                name: Featured
+                links:
+                    -
+                        name: Leather jacket
+                        href: '#'
+                    -
+                        name: Purple hat
+                        href: '#'
+                    -
+                        name: Red bandana
+                        href: '#'
+    -
+        name: About
+        href: '#'
 _structures:
     menu_items:
         values:
@@ -41,7 +76,6 @@ _structures:
                         -
                             name:
                             links:
-                            
     links:
         values:
             -
