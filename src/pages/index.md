@@ -13,26 +13,20 @@ _structures:
     menu_items:
         id_key:
         values:
-          - label: Link
+          - label: Static link
             value:
-                link:
+                name:
+                href:
+          - label: Collection link
+            value:
+                name:
+                collection:
           - label: Dropdown
             value:
                 name:
-                dropdown_items:
-                    name:
-                    links:
-    link:
-        id_key:
-        values:
-          - label: Static link
-            value:
-                name:
-                href:
-          - label: Collection link
-            value:
-                name:
-                collection:
+                lists:
+                  - name:
+                    links:  
 
     links:
         id_key:
@@ -45,10 +39,4 @@ _structures:
             value:
                 name:
                 collection:
-
-_inputs: 
-    link:
-        type: object
-    links:
-        type: array
 ---
