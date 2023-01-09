@@ -29,7 +29,10 @@
       ],
       "@assets/*": [
         "public/assets/*"
-      ]
+      ],
+      "@interfaces/*": [
+        "src/interfaces/*"
+      ],
     }
   },
   "extends": "astro/tsconfigs/base"

@@ -2,7 +2,7 @@
   // Declare and import dependencies
 
   // Declare exported variables with default values
-  export let element: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' = 'h1'
+  export let element: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span' = 'h1'
   export let color: 'light' | 'dark' = 'dark'
   let className = ''
   export { className as class }
@@ -14,6 +14,7 @@
     h4: 'md',
     h5: 'sm',
     h6: 'xs',
+    span: 'xs',
   }
 
   export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | string =
@@ -25,14 +26,14 @@
 
 <svelte:element
   this={element}
-  class="font-bold leading-none
+  class="leading-none
 
-    {size === 'xs' && 'res-heading-xs'}
-    {size === 'sm' && 'res-heading-sm'}
+    {size === '2xl' && 'res-heading-2xl font-bold'}
+    {size === 'xl' && 'res-heading-xl font-bold'}
+    {size === 'lg' && 'res-heading-lg font-bold'}
     {size === 'md' && 'res-heading-base'}
-    {size === 'lg' && 'res-heading-lg'}
-    {size === 'xl' && 'res-heading-xl'}
-    {size === '2xl' && 'res-heading-2xl'}
+    {size === 'sm' && 'res-heading-sm'}
+    {size === 'xs' && 'text-base md:text-lg font-normal'}
 
     {color === 'light' && 'text-white'}
     {color === 'dark' && 'text-gray-800'}

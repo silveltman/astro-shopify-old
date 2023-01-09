@@ -2,7 +2,13 @@
   import type { Image } from '@interfaces/shopify/common'
   import { getSrcset } from 'public/shopify'
 
-  export let image: Image
+  export let image: Image = {
+    url: '',
+    altText: '',
+    id: '',
+    width: 0,
+    height: 0,
+  }
 
   // set per-usecase
   export let sizes = ''

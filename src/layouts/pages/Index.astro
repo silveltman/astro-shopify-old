@@ -1,10 +1,22 @@
 ---
-import HeroBoxed from '@components/macro/hero/HeroBoxed.svelte'
 import Layout from '@layouts/Base.astro'
+import Hero from '@components/macro/Hero.svelte'
+import Cta from '@components/macro/Cta.svelte'
+import Collections from '@components/macro/Carousel.svelte'
 const { seo, hero } = Astro.props.frontmatter
+
+import { getCollections, getProducts } from 'public/shopify'
+
+let collections = await getCollections()
+let products = await getProducts()
 ---
 
 <Layout {seo}>
   <!-- <HeroBoxed content={hero} /> -->
   <!-- <Carousel /> -->
+  <Hero />
+
+  <Collections items={collections} />
+
+  <Cta />
 </Layout>

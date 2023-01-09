@@ -6,8 +6,6 @@ module.exports = {
 			primary: ["'Inter'", 'sans serif'],
 			// secondary: ["'FromTheStars'", 'display', 'sans serif'],
 		},
-		// docs: https://www.npmjs.com/package/tailwind-fluid-typography
-		fluidTypography: {},
 		extend: {
 			colors: {
 				primary: {
@@ -45,7 +43,6 @@ module.exports = {
 		aspectRatio: false,
 	},
 	plugins: [
-		require("tailwind-fluid-typography"),
 		require('tailwind-scrollbar'),
 		require('@tailwindcss/aspect-ratio'),
 		require('@tailwindcss/forms'),
