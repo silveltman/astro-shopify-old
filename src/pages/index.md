@@ -16,14 +16,25 @@ _structures:
           - label: Link
             value:
                 link:
-          - label: Dropdown
+          -label: Dropdown
             value:
                 name:
                 dropdown_items:
                     name:
-                    list_items:
-                      - link:
+                    links:
     link:
+        id_key:
+        values:
+          - label: Static link
+            value:
+                name:
+                href:
+          - label: Collection link
+            value:
+                name:
+                collection:
+
+    links:
         id_key:
         values:
           - label: Static link
@@ -38,4 +49,6 @@ _structures:
 _inputs: 
     link:
         type: object
+    links:
+        type: array
 ---
