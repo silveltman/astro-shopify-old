@@ -12,8 +12,8 @@ _structures:
     menu_items:
         values:
             -
-                label: Static link
-                _type: StaticLink
+                label: Page link
+                _type: PageLink
                 icon: article
                 text_key: name
                 subtext_key: label
@@ -32,7 +32,7 @@ _structures:
             -
                 label: Dropdown
                 _type: Dropdown
-                icon: view_column
+                icon: format_list_bulleted
                 text_key: name
                 subtext_key: label
                 value:
@@ -45,8 +45,8 @@ _structures:
     links:
         values:
             -
-                label: Static link
-                _type: StaticLink
+                label: Page link
+                _type: PageLink
                 icon: article
                 text_key: name
                 subtext_key: label
