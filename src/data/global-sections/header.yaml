@@ -2,25 +2,36 @@ menu_items:
 
 _structures:
     menu_items:
+        id_key:
         values:
-          - label: Link
-            value:
-                link:
-          - label: Dropdown
+            -
+                label: Static link
                 value:
                     name:
-                    dropdown_items:
-                        name:
-                        list_items:
-                          - link:
-
-    link:
+                    href:
+            -
+                label: Collection link
+                value:
+                    name:
+                    collection:
+            -
+                label: Dropdown
+                value:
+                    name:
+                    lists:
+                        -
+                            name:
+                            links:
+    links:
+        id_key:
         values:
-          - label: Static link
-            value:
-                name:
-                href:
-          - label: Collection link
-            value:
-                name:
-                collection:
+            -
+                label: Static link
+                value:
+                    name:
+                    href:
+            -
+                label: Collection link
+                value:
+                    name:
+                    collection:
