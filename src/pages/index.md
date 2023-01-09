@@ -8,11 +8,7 @@ image: >-
 image2:
 
 
-navigation:
-
-_structures:
-    navigation:
-        
+navigation:    
 
 _structures:
     navigation:
