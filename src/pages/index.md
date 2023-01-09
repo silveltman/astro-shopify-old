@@ -6,47 +6,40 @@ seo:
 image: >-
     https://images.unsplash.com/photo-1673117921063-5dde75f25a81?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=898&q=80
 image2:
-navigation:
-    -
-        name: Home
-        href: /
-    -
-        name: About
-        href: '#'
-    -
-        name: Women
-        dropdown_items:
-            -
-                -
-                    name: Sleep
-                    href: /products/sleep
-                -
-                    name: Swimwear
-                    href: '#'
+
+
+menut_items:
+object:
+
+
 _structures:
-    navigation:
-        style: modal
+    menu_items:
         values:
-            -
-                label: Link
-                value:
-                    name:
-                    href:
-            -
-                label: Dropdown
+          - label: Link
+            value:
+                link:
+          - label: Dropdown
                 value:
                     name:
                     dropdown_items:
-    dropdown_items:
-        values:
-            -
-                label: Collection
-                value:
-                    collection:
-            -
-                label: Custom
-                value:
-                    -
                         name:
-                        href:
+                        list_items:
+                          - link:
+
+    link:
+        values:
+          - label: Static link
+            value:
+                name:
+                href:
+          - label: Collection link
+            value:
+                name:
+                collection:
+    
+    object:
+        value:
+            title: 
+            description:
+
 ---
