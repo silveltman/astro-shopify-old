@@ -43,34 +43,35 @@ menu_items:
     -
         name: About
         href: '#'
+
 _structures:
     menu_items:
         values:
             -
                 label: Page link
-                _type: PageLink
                 icon: article
                 text_key: name
                 subtext_key: href
                 value:
+                    _type: PageLink
                     name:
                     href:
             -
                 label: Collection link
-                _type: CollectionLink
                 icon: category
                 text_key: name
                 subtext_key: collection
                 value:
+                    _type: CollectionLink
                     name:
                     collection:
             -
                 label: Dropdown
-                _type: Dropdown
                 icon: format_list_bulleted
                 text_key: name
                 subtext_key: lists
                 value:
+                    _type: Dropdown
                     name:
                     lists:
                         -
@@ -80,20 +81,20 @@ _structures:
         values:
             -
                 label: Page link
-                _type: PageLink
                 icon: article
                 text_key: name
                 subtext_key: href
                 value:
+                    _type: PageLink
                     name:
                     href:
             -
                 label: Collection link
-                _type: CollectionLink
                 icon: category
                 text_key: name
                 subtext_key: collection
                 value:
+                    _type: CollectionLink
                     name:
                     collection:
 ---

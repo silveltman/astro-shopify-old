@@ -1,7 +1,7 @@
 <script lang="ts">
-  type MenuItems = (StaticLink | CollectionLink | Dropdown)[]
+  type MenuItems = (PageLink | CollectionLink | Dropdown)[]
 
-  interface StaticLink {
+  interface PageLink {
     name: string
     href: string
   }
@@ -13,12 +13,10 @@
 
   interface Dropdown {
     name: string
-    lists: [
-      {
-        name: string
-        links: (StaticLink | CollectionLink)[]
-      }
-    ]
+    lists: {
+      name: string
+      links: (PageLink | CollectionLink)[]
+    }[]
   }
 
   export let menuItems: MenuItems = [
@@ -27,18 +25,22 @@
       href: '/',
     },
     {
-      name: 'Shop',
+      name: 'Swimwear',
+      collection: 'swimwear',
+    },
+    {
+      name: 'Men',
       lists: [
         {
-          name: 'Featured',
+          name: 'Collections',
           links: [
             {
               name: 'Sleep',
-              href: '#',
+              collection: 'sleep',
             },
             {
               name: 'Swimwear',
-              href: '#',
+              collection: 'swimwear',
             },
             {
               name: 'Underwear',
@@ -47,19 +49,19 @@
           ],
         },
         {
-          name: 'Collection',
+          name: 'Shop',
           links: [
             {
-              name: 'Everything',
-              href: '#',
+              name: 'Sleep',
+              collection: 'sleep',
             },
             {
-              name: 'Core',
-              href: '#',
+              name: 'Swimwear',
+              collection: 'swimwear',
             },
             {
-              name: 'New arrivals',
-              collection: 'newarrivals',
+              name: 'Underwear',
+              collection: 'underwear',
             },
           ],
         },
@@ -67,7 +69,7 @@
     },
     {
       name: 'About',
-      href: '/about',
+      href: '#',
     },
   ]
 </script>
