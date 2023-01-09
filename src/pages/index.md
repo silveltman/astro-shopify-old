@@ -36,4 +36,8 @@ _structures:
             value:
                 name:
                 collection:
+
+_inputs: 
+    link:
+        type: object
 ---
