@@ -36,10 +36,4 @@ _structures:
             value:
                 name:
                 collection:
-    
-    object:
-        value:
-            title: 
-            description:
-
 ---
