@@ -16,7 +16,7 @@ _structures:
           - label: Link
             value:
                 link:
-          -label: Dropdown
+          - label: Dropdown
             value:
                 name:
                 dropdown_items:
