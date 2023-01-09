@@ -8,7 +8,7 @@ image: >-
 image2:
 
 
-Menu_items:
+menu_items:
 
 _structures:
     menu_items:
