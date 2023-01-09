@@ -16,7 +16,7 @@ _structures:
                 _type: PageLink
                 icon: article
                 text_key: name
-                subtext_key: label
+                subtext_key: href
                 value:
                     name:
                     href:
@@ -25,7 +25,7 @@ _structures:
                 _type: CollectionLink
                 icon: category
                 text_key: name
-                subtext_key: label
+                subtext_key: collection
                 value:
                     name:
                     collection:
@@ -34,7 +34,7 @@ _structures:
                 _type: Dropdown
                 icon: format_list_bulleted
                 text_key: name
-                subtext_key: label
+                subtext_key: lists
                 value:
                     name:
                     lists:
@@ -49,7 +49,7 @@ _structures:
                 _type: PageLink
                 icon: article
                 text_key: name
-                subtext_key: label
+                subtext_key: href
                 value:
                     name:
                     href:
@@ -58,7 +58,7 @@ _structures:
                 _type: CollectionLink
                 icon: category
                 text_key: name
-                subtext_key: label
+                subtext_key: collection
                 value:
                     name:
                     collection:
