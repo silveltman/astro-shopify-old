@@ -14,18 +14,27 @@ _structures:
             -
                 label: Static link
                 _type: StaticLink
+                icon: article
+                text_key: name
+                subtext_key: label
                 value:
                     name:
                     href:
             -
                 label: Collection link
                 _type: CollectionLink
+                icon: category
+                text_key: name
+                subtext_key: label
                 value:
                     name:
                     collection:
             -
                 label: Dropdown
                 _type: Dropdown
+                icon: view_column
+                text_key: name
+                subtext_key: label
                 value:
                     name:
                     lists:
@@ -38,12 +47,18 @@ _structures:
             -
                 label: Static link
                 _type: StaticLink
+                icon: article
+                text_key: name
+                subtext_key: label
                 value:
                     name:
                     href:
             -
                 label: Collection link
                 _type: CollectionLink
+                icon: category
+                text_key: name
+                subtext_key: label
                 value:
                     name:
                     collection:
