@@ -1,20 +1,26 @@
-links:
-  - text: Home
-    url: "/"
-  - text: Products
-    url: "#"
-  - text: Contact
-    url: "/contact"
+menu_items:
 
-buttons:
-  cart:
-  account:
-  search: 
+_structures:
+    menu_items:
+        values:
+          - label: Link
+            value:
+                link:
+          - label: Dropdown
+                value:
+                    name:
+                    dropdown_items:
+                        name:
+                        list_items:
+                          - link:
 
-
-CtaPrimary:
-  text: Sign up
-  url: "#"
-CtaSecondary:
-  text: Sign in
-  url: "#"
+    link:
+        values:
+          - label: Static link
+            value:
+                name:
+                href:
+          - label: Collection link
+            value:
+                name:
+                collection:

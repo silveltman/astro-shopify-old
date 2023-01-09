@@ -8,25 +8,25 @@ image: >-
 image2:
 
 
-menut_items:
-object:
-
+Menu_items:
 
 _structures:
     menu_items:
+        id_key:
         values:
           - label: Link
             value:
                 link:
           - label: Dropdown
-                value:
+            value:
+                name:
+                dropdown_items:
                     name:
-                    dropdown_items:
-                        name:
-                        list_items:
-                          - link:
+                    list_items:
+                        - link:
 
     link:
+        id_key:
         values:
           - label: Static link
             value:
