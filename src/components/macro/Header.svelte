@@ -13,12 +13,12 @@
 
   interface Dropdown {
     name: string
-    lists: List[]
-  }
-
-  interface List {
-    name: string
-    links: (StaticLink | CollectionLink)[]
+    lists: [
+      {
+        name: string
+        links: (StaticLink | CollectionLink)[]
+      }
+    ]
   }
 
   export let menuItems: MenuItems = [
