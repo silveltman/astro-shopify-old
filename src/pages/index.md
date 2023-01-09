@@ -13,19 +13,16 @@ _structures:
     menu_items:
         id_key:
         values:
-            -
-                label: Link
-                value:
-                    link:
-            -
-                label: Dropdown
-                value:
+          - label: Link
+            value:
+                link:
+          - label: Dropdown
+            value:
+                name:
+                dropdown_items:
                     name:
-                    dropdown_items:
-                        name:
-                        list_items:
-                            -
-                                link:
+                    list_items:
+                      - link:
     link:
         id_key:
         values:
