@@ -17,7 +17,7 @@
 
 <div
   class=" 
-        mx-auto px-container w-full relative
+        mx-auto px-container w-full
 
         {disablePadding === true && '!px-0'}
         {disablePadding == 'sm' && 'max-sm:!px-0'}

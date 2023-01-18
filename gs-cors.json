@@ -1,6 +1,18 @@
 [
     {
         "origin": [
+            "https://app.cloudcannon.com"
+        ],
+        "responseHeader": [
+            "Content-Type"
+        ],
+        "method": [
+            "*"
+        ],
+        "maxAgeSeconds": 3600
+    },
+    {
+        "origin": [
             "https://energized-beet.cloudvent.net/"
         ],
         "responseHeader": [

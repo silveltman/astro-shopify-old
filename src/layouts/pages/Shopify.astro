@@ -1,7 +1,6 @@
 ---
-import CardCollection from '@components/meso/card/CardCollection.svelte'
-import CardProduct from '@components/meso/card/Product.svelte'
-import Carousel from '@components/meso/Carousel.svelte'
+import Nested from '@components/meso/menu/Nested.svelte'
+import Test from '@components/meso/menu/Test.svelte'
 import Layout from '@layouts/Base.astro'
 const { seo } = Astro.props.frontmatter
 
@@ -9,16 +8,56 @@ import { getCollections, getProducts } from 'public/shopify'
 
 let collections = await getCollections()
 let products = await getProducts()
-console.log(products[0])
+
+const nested = {
+  name: 'Collections',
+  children: [
+    {
+      name: null,
+      collection: collections[0],
+      children: [
+        {
+          name: null,
+          collection: collections[0],
+          children: [
+            {
+              name: null,
+              collection: collections[0],
+            },
+            {
+              name: null,
+              collection: collections[1],
+            },
+            {
+              name: null,
+              collection: collections[2],
+            },
+          ],
+        },
+        {
+          name: null,
+          collection: collections[1],
+        },
+        {
+          name: null,
+          collection: collections[2],
+        },
+      ],
+    },
+    {
+      name: null,
+      collection: collections[1],
+    },
+    {
+      name: null,
+      collection: collections[2],
+    },
+  ],
+}
 ---
 
 <Layout {seo}>
-  <Carousel
-    items={products}
-    client:load
-  />
-  <Carousel
-    items={collections}
-    client:load
-  />
+  <!-- <Nested cms={nested} /> -->
+
+  <Test />
 </Layout>
