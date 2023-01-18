@@ -1,6 +1,5 @@
 paths:
-  uploads: assets/uploads
-  dam_uploads: raw
+  dam_uploads: uploads
 
 # -----------------------------------------------
 # Cloudcannn sidebar configuration
