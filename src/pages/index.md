@@ -4,7 +4,7 @@ seo:
     title:
     description:
 image: https://storage.googleapis.com/astro-shopify-testing/kaart.png
-second_image:
+second_image: https://storage.googleapis.com/astro-shopify-testing/download.jfif
 menu_items:
     -
         _type: PageLink
