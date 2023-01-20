@@ -4,7 +4,7 @@ seo:
     title:
     description:
 image: https://storage.googleapis.com/astro-shopify-testing/bucket-test.jpg
-second_image: https://storage.googleapis.com/astro-shopify-testing/download.jfif
+second_image: ''
 menu_items:
     -
         _type: PageLink
