@@ -14,17 +14,18 @@
 >
   <AspectRatio
     {orientation}
-    class="border border-gray-100 bg-gray-50 rounded-lg overflow-hidden"
+    class="overflow-hidden border border-gray-100 rounded-lg bg-gray-50"
   >
     {#if collection.image}
       <ShopifyImg
         image={collection.image}
-        class="rounded-lg w-full object-cover h-full group-hover:opacity-75 transition-opacity"
+        class="object-cover w-full h-full transition-opacity rounded-lg group-hover:opacity-75"
       />
     {/if}
   </AspectRatio>
   <Heading
-    element="span"
+    variant="span"
+    size="md"
     class="text-center !text-gray-600"
   >
     {collection.title}
@@ -37,11 +38,11 @@
 >
   <AspectRatio
     {orientation}
-    class="border border-gray-100 bg-gray-50 rounded-lg overflow-hidden"
+    class="overflow-hidden border border-gray-100 rounded-lg bg-gray-50"
   >
     <Image
       image={product.images[0]}
-      class="rounded-lg w-full object-contain h-full group-hover:opacity-75 transition-opacity"
+      class="object-contain w-full h-full transition-opacity rounded-lg group-hover:opacity-75"
     />
   </AspectRatio>
 

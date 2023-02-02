@@ -1,5 +1,5 @@
 <script lang="ts">
-  import FormFieldWrapper from '@components/layout/FormFieldWrapper.svelte'
+  import FormFieldWrapper from '@components/ARCHIVE/FormFieldWrapper.svelte'
 
   export let size: 'sm' | 'md' | 'lg' = 'md'
   export let name = ''

@@ -5,7 +5,6 @@
   export let image: Image = {
     url: '',
     altText: '',
-    id: '',
     width: 0,
     height: 0,
   }

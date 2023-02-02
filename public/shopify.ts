@@ -1,5 +1,6 @@
 // Docs https://github.com/shopify/js-buy-sdk/
 import Client from 'shopify-buy'
+import type { Image } from '@interfaces/shopify/common'
 
 // Initializing a client to return content in the store's primary language
 const client = Client.buildClient({
@@ -79,6 +80,10 @@ async function updateShippingAddress(checkoutId: string, shippingAddress: object
     return client.checkout.updateShippingAddress(checkoutId, shippingAddress)
 }
 
+function imageForSize(image: Image, options: { maxWidth: number, maxHeight: number }) {
+    return client.image.helpers.imageForSize(image, options);
+}
+
 function getSrcset(image: object, sizes: number[]) {
     let generatedImages = [];
     sizes.forEach((size) => {
@@ -104,6 +109,7 @@ export {
     removeDiscount,
     updateShippingAddress,
 
+    imageForSize,
     getSrcset
 }
 

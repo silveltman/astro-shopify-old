@@ -1,42 +1,42 @@
 <script lang="ts">
-  // Declare and import dependencies
-
-  // Declare exported variables with default values
-  export let element: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span' = 'h1'
-  export let color: 'light' | 'dark' = 'dark'
+  export let theme: 'dark' | 'light' = 'light'
+  export let variant: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span' | 'p' =
+    'h1'
   let className = ''
   export { className as class }
 
   const defaultSizes = {
-    h1: '2xl',
-    h2: 'xl',
-    h3: 'lg',
-    h4: 'md',
-    h5: 'sm',
-    h6: 'xs',
+    h1: '3xl',
+    h2: '2xl',
+    h3: 'xl',
+    h4: 'lg',
+    h5: 'md',
+    h6: 'sm',
     span: 'xs',
+    p: 'xs',
   }
 
-  export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | string =
-    defaultSizes[element]
-
-  // Declare other variables
-  // Add event listeners or function definitions below
+  export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | string =
+    defaultSizes[variant]
 </script>
 
 <svelte:element
-  this={element}
-  class="leading-none
+  this={variant}
+  class="text-gray-900
 
-    {size === '2xl' && 'res-heading-2xl font-bold'}
-    {size === 'xl' && 'res-heading-xl font-bold'}
-    {size === 'lg' && 'res-heading-lg font-bold'}
-    {size === 'md' && 'res-heading-base'}
-    {size === 'sm' && 'res-heading-sm'}
-    {size === 'xs' && 'text-base md:text-lg font-normal'}
+    {theme === 'dark' && 'text-gray-100'}
+    {theme === 'light' && 'text-gray-900'}
 
-    {color === 'light' && 'text-white'}
-    {color === 'dark' && 'text-gray-800'}
+    {size === '3xl' &&
+    'font-bold text-4xl sm:text-5xl md:text-6xl tracking-tight'}
+    {size === '2xl' && 'font-bold text-3xl sm:text-4xl tracking-tight'}
+    {size === 'xl' && 'font-bold text-2xl sm:text-3xl  tracking-tight'}
+
+    {size === 'lg' && 'font-semibold text-xl'}
+    {size === 'md' && 'font-semibold text-lg'}
+    {size === 'sm' && 'font-semibold text-md'}
+    {size === 'xs' && 'font-semibold text-sm'}
+
     
     {className}
     "

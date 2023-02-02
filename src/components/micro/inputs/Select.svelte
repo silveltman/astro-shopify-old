@@ -1,6 +1,6 @@
 <script lang="ts">
   import Icon from '@components/micro/content/Icon.svelte'
-  import FormFieldWrapper from '@components/layout/FormFieldWrapper.svelte'
+  import FormFieldWrapper from '@components/ARCHIVE/FormFieldWrapper.svelte'
 
   export let size: 'sm' | 'md' | 'lg' = 'md'
   export let type: 'text' | 'password' | 'email' | 'number' | 'hidden' = 'text'

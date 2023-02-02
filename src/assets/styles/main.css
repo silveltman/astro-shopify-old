@@ -2,43 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        @apply font-extrabold text-gray-800;
-    }
-
-    h1 {
-        @apply res-heading-2xl font-bold text-gray-800;
-    }
-
-    h2 {
-        @apply res-heading-xl;
-    }
-
-    h3 {
-        @apply res-heading-lg;
-    }
-
-    h4 {
-        @apply res-heading-base;
-    }
-
-    h5 {
-        @apply res-heading-sm;
-    }
-
-    h6 {
-        @apply res-heading-xs;
-    }
-    p {
-        @apply text-gray-600 leading-normal;
-    }
-}
+@layer base {}
 
 @layer components {
     .input {
@@ -63,59 +27,11 @@
         @apply px-4 sm:px-8 md:px-10 lg:px-16;
     }
 
-    .py-section{
-        @apply py-12 sm:py-16 md:py-20 lg:py-24
+    .py-section {
+        @apply py-10 sm:py-12 md:py-14 lg:py-16
     }
 
     .gap-res {
         @apply gap-x-4 sm:gap-x-8 md:gap-x-10 lg:gap-x-16 gap-y-12 sm:gap-y-16 md:gap-y-20 lg:gap-y-24
-    }
-
-    .res-text-xs {
-        @apply text-xs md:text-sm;
-    }
-
-    .res-text-sm {
-        @apply text-sm md:text-base;
-    }
-
-    .res-text-base,
-    .res-text-md,
-    .res-text-base {
-        @apply text-base md:text-lg;
-    }
-
-    .res-text-lg {
-        @apply text-lg md:text-xl;
-    }
-
-    .res-text-xl {
-        @apply text-xl md:text-2xl;
-    }
-
-    .res-heading-xs {
-        @apply text-base md:text-lg;
-    }
-
-    .res-heading-sm {
-        @apply text-lg sm:text-xl md:text-2xl;
-    }
-
-    .res-heading-base,
-    .res-heading-md,
-    .res-heading {
-        @apply text-xl sm:text-2xl md:text-3xl;
-    }
-
-    .res-heading-lg {
-        @apply text-2xl sm:text-3xl md:text-4xl;
-    }
-
-    .res-heading-xl {
-        @apply text-3xl sm:text-4xl md:text-5xl;
-    }
-
-    .res-heading-2xl {
-        @apply text-4xl sm:text-5xl md:text-6xl;
     }
 }

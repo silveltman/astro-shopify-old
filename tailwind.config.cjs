@@ -3,23 +3,23 @@ module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		fontFamily: {
-			primary: ["'Inter'", 'sans serif'],
+			sans: ["'Inter var'", 'sans serif'],
 			// secondary: ["'FromTheStars'", 'display', 'sans serif'],
 		},
 		extend: {
 			colors: {
 				primary: {
-					DEFAULT: '#007AFF',
-					50: '#B8DAFF',
-					100: '#A3CFFF',
-					200: '#7ABAFF',
-					300: '#52A5FF',
-					400: '#298FFF',
-					500: '#007AFF',
-					600: '#005FC7',
-					700: '#00448F',
-					800: '#002957',
-					900: '#000F1F'
+					DEFAULT: '#4f46e5',
+					50: '#eef2ff',
+					100: '#e0e7ff',
+					200: '#c7d2fe',
+					300: '#a5b4fc',
+					400: '#818cf8',
+					500: '#6366f1',
+					600: '#4f46e5',
+					700: '#4338ca',
+					800: '#3730a3',
+					900: '#312e81'
 				},
 				warning: '#FF9500',
 				error: '#FF3B30',

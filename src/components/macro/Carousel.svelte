@@ -6,17 +6,17 @@
   import Heading from '@components/micro/content/Heading.svelte'
   import Text from '@components/micro/content/Text.svelte'
   import Carousel from '@components/meso/Carousel.svelte'
+  import ButtonIcon from '@components/micro/inputs/button/Icon.svelte'
+  import ButtonSecondary from '@components/micro/inputs/button/Secondary.svelte'
 
   interface Carousel {
-    heading?: string
-    text?: string | null
+    heading: string
     button?: any
   }
   export let items: (Collection | Product)[]
 
   export let content: Carousel = {
     heading: 'Collections',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vel tincidunt luctus, nunc elit lacinia nisl, vel aliquam nisl nunc vel lorem.',
     button: {
       text: 'Browse all collections',
       href: '#',
@@ -29,27 +29,18 @@
   <Container class="flex flex-col gap-y">
     <div class="flex flex-col gap-y-sm">
       <div class="flex items-center justify-between gap-x">
-        {#if content.heading}
-          <Heading
-            class="max-w-2xl"
-            element="h2"
-            size="sm"
-          >
-            {content.heading}
-          </Heading>
-        {/if}
-        {#if content.button}
-          <Button
-            variant="subtle"
-            content={content.button}
-          />
-        {/if}
+        <Heading
+          class="max-w-2xl"
+          element="h2"
+          size="lg"
+        >
+          {content.heading}
+        </Heading>
+        <ButtonSecondary
+          text={content.button.text}
+          href={content.button.href}
+        />
       </div>
-      {#if content.button}
-        <Text class="max-w-lg">
-          {content.text}
-        </Text>
-      {/if}
     </div>
     <Carousel {items} />
   </Container>

@@ -2,7 +2,7 @@ export interface Image {
     altText?: string;
     height?: number;
     id?: string;
-    url: string;
+    url?: string;
     width?: number;
 
     // Deprecated fields

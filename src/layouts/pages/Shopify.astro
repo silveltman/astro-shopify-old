@@ -6,6 +6,9 @@ const { seo } = Astro.props.frontmatter
 
 import { getCollections, getProducts } from 'public/shopify'
 
+import CardProduct from '@components/meso/card/Product.svelte'
+import CardCollection from '@components/meso/card/Collection.svelte'
+
 let collections = await getCollections()
 let products = await getProducts()
 
@@ -58,6 +61,9 @@ const nested = {
 
 <Layout {seo}>
   <!-- <Nested cms={nested} /> -->
+  <div class="max-w-xl">
+    <!-- <CardProduct product={products[0]} /> -->
 
-  <Test />
+    <!-- <CardCollection collection={collections[0]} /> -->
+  </div>
 </Layout>
