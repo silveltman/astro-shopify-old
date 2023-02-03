@@ -3,7 +3,7 @@ layout: '@layouts/pages/Index.astro'
 seo:
     title:
     description:
-image: https://storage.googleapis.com/astro-shopify-testing/bucket-test.jpg
+image: https://storage.googleapis.com/astro-shopify-testing/image 6.jpg
 second_image: ''
 menu_items:
     -
