@@ -1,0 +1,70 @@
+---
+import Layout from '@layouts/Base.astro'
+const { seo } = Astro.props.frontmatter
+import { getCollections, getProducts } from 'public/shopify'
+
+import CardProduct from '@components/meso/card/Product.svelte'
+import CardCollection from '@components/meso/card/Collection.svelte'
+import ProductList from '@components/meso/ProductList.svelte'
+import Banner from '@components/macro/Banner.svelte'
+import Header from '@components/macro/Header.svelte'
+import Toolbar from '@components/macro/Toolbar.svelte'
+
+let collections = await getCollections()
+let products = await getProducts()
+
+console.log(products)
+
+const nested = {
+  name: 'Collections',
+  children: [
+    {
+      name: null,
+      collection: collections[0],
+      children: [
+        {
+          name: null,
+          collection: collections[0],
+          children: [
+            {
+              name: null,
+              collection: collections[0],
+            },
+            {
+              name: null,
+              collection: collections[1],
+            },
+            {
+              name: null,
+              collection: collections[2],
+            },
+          ],
+        },
+        {
+          name: null,
+          collection: collections[1],
+        },
+        {
+          name: null,
+          collection: collections[2],
+        },
+      ],
+    },
+    {
+      name: null,
+      collection: collections[1],
+    },
+    {
+      name: null,
+      collection: collections[2],
+    },
+  ],
+}
+---
+
+<Layout {seo}>
+  <Header />
+  <Banner />
+  <Toolbar />
+  <ProductList {products} />
+</Layout>
