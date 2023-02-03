@@ -8,7 +8,7 @@
 
   // content props
   export let text: string = 'Click me'
-  export let href: string
+  export let href: string = ''
 </script>
 
 <svelte:element
@@ -16,7 +16,7 @@
   on:click
   {href}
   {disabled}
-  class="text-center rounded-full font-medium 
+  class="text-center rounded-full font-medium border
 
     {disabled && '!pointer-events-none !opacity-50 !border-neutral'}
           
@@ -25,12 +25,12 @@
     {size === 'lg' && 'text-lg h-14 px-8'}
 
     {color == 'primary' &&
-    'text-primary-800 hover:bg-primary-800/10 border-primary-800'}
+    'text-primary-800 hover:bg-primary/5 border-primary-800'}
     {color == 'secondary' &&
-    'text-secondary-800 hover:bg-secondary-800/10 border-secondary-800'}
+    'text-secondary-800 hover:bg-secondary/5 border-secondary-800'}
     {color == 'black' &&
-    'text-neutral-900 hover:bg-neutral-900/10 border-neutral-900'}
-    {color == 'white' && 'text-white hover:bg-white/10 border-white'}
+    'text-neutral-900 hover:bg-neutral-900/5 border-neutral-900'}
+    {color == 'white' && 'text-white hover:bg-white/5 border-white'}
 
     {className}
   "

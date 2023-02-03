@@ -3,10 +3,22 @@
 
   // config props
   export let size: 'sm' | 'md' | 'lg' = 'md'
-  export let theme: 'color' | 'light' | 'dark' = 'color'
+  export let color: 'primary' | 'secondary' | 'black' | 'white' = 'primary'
   export let disabled: boolean = false
   let className = ''
   export { className as class }
+
+  // icon props
+  export let filled: boolean = false
+  export let weight:
+    | 'thin'
+    | 'extralight'
+    | 'light'
+    | 'regular'
+    | 'medium'
+    | 'semibold'
+    | 'bold' = 'regular'
+  export let grade: 'low' | 'medium' | 'high' = 'medium'
 
   // content props
   export let icon: string = 'shopping_cart'
@@ -19,7 +31,7 @@
   on:click
   {href}
   {disabled}
-  class="inline-flex items-center justify-center disabled focus gap-1.5 rounded-sm
+  class="inline-flex items-center justify-center disabled focus gap-1.5 rounded-full p-2
 
       {disabled && '!pointer-events-none !opacity-50 !text-neutral'}
 
@@ -27,9 +39,13 @@
       {size === 'md' && 'text-base'}
       {size === 'lg' && 'text-lg'}
 
-      {theme == 'color' && 'text-primary hover:text-primary-700'}
-      {theme == 'light' && 'text-white hover:text-neutral-100'}
-      {theme == 'dark' && 'text-neutral-500 hover:text-neutral-900'}
+      {color == 'primary' &&
+    'text-primary-800 hover:bg-primary/10 border-primary-800'}
+      {color == 'secondary' &&
+    'text-secondary-800 hover:bg-secondary/5 border-secondary-800'}
+      {color == 'black' &&
+    'text-neutral-900 hover:bg-neutral-900/5 border-neutral-900'}
+      {color == 'white' && 'text-white hover:bg-white/5 border-white'}
 
       {className}
     "
@@ -38,6 +54,9 @@
   <Icon
     name={icon}
     {size}
+    {filled}
+    {weight}
+    {grade}
   />
   {text}
 </svelte:element>

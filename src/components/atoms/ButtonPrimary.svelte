@@ -8,7 +8,7 @@
 
   // content props
   export let text: string = 'Click me'
-  export let href: string
+  export let href: string = ''
 </script>
 
 <svelte:element
