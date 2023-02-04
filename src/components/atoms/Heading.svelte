@@ -15,7 +15,7 @@
   }
 
   // config props
-  export let element: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'string' = 'h1'
+  export let element: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | string = 'h1'
   export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' =
     getSize(element)
   let className = ''

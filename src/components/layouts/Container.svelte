@@ -19,7 +19,7 @@
 <svelte:element
   this={element}
   class=" 
-        mx-auto px-4 sm:px-8 relative md:px-10 lg:px-16 w-full 
+        mx-auto relative px-container w-full 
 
         {disablePadding === true && '!px-0'}
         {disablePadding == 'sm' && 'max-sm:!px-0'}

@@ -1,0 +1,18 @@
+---
+import Layout from '@layouts/Base.astro'
+import { Container, Section } from '@components/layouts'
+import Gallery from '@components/blocks/Gallery.svelte'
+import { getCollections, getProducts } from 'public/shopify'
+import Accordion from '@components/blocks/Accordion.svelte'
+let collections = await getCollections()
+let products = await getProducts()
+---
+
+<Layout>
+  <Section class="w-full">
+    <Gallery client:load />
+  </Section>
+  <Section class="w-full">
+    <Accordion client:idle />
+  </Section>
+</Layout>

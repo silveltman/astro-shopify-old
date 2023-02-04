@@ -1,6 +1,6 @@
 <script lang="ts">
   export let theme: 'dark' | 'light' = 'light'
-  export let element: 'p' | 'string' = 'p'
+  export let element: 'p' | string = 'p'
   export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = 'md'
   let className = ''
   export { className as class }
@@ -10,7 +10,7 @@
   this={element}
   class="leading-relaxed
 
-      {theme === 'light' && 'text-neutral-500'}
+      {theme === 'light' && 'text-neutral-600'}
       {theme === 'dark' && 'text-neutral-300'}
   
       {size === 'xl' && 'text-xl'}

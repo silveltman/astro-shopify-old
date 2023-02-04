@@ -3,7 +3,7 @@
 
   // config props
   export let size: 'sm' | 'md' | 'lg' = 'md'
-  export let color: 'primary' | 'secondary' | 'black' | 'white' = 'primary'
+  export let color: 'primary' | 'secondary' | 'black' | 'white' = 'black'
   export let disabled: boolean = false
   let className = ''
   export { className as class }

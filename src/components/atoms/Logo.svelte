@@ -15,7 +15,7 @@
 >
   <img
     class="w-auto h-full"
-    src={site.logo[variant].src}
-    alt={site.logo[variant].alt}
+    src={site.branding.logo[variant].src}
+    alt={site.branding.logo[variant].alt}
   />
 </svelte:element>

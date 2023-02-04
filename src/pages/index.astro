@@ -1,0 +1,28 @@
+---
+import CardCollection from '@components/blocks/CardCollection.svelte'
+import Carousel from '@components/blocks/Carousel.svelte'
+import { Container, Section } from '@components/layouts'
+import Hero from '@components/sections/Hero.svelte'
+import HeroPrimary from '@components/sections/HeroPrimary.svelte'
+import HeroSecondary from '@components/sections/HeroSecondary.svelte'
+import Layout from '@layouts/Base.astro'
+
+import { getCollections, getProducts } from 'public/shopify'
+let collections = await getCollections()
+let products = await getProducts()
+---
+
+<Layout>
+  <HeroPrimary />
+  <HeroSecondary />
+
+  <Section>
+    <Container>
+      <Carousel>
+        <CardCollection collection={collections[0]} />
+        <CardCollection collection={collections[1]} />
+        <CardCollection collection={collections[2]} />
+      </Carousel>
+    </Container>
+  </Section>
+</Layout>

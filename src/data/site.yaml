@@ -1,10 +1,10 @@
 branding:
   logo:
     full:
-      src:
+      src: /img/logo/default.svg
       alt:
     square:
-      src:
+      src: /img/logo/icon.svg
       alt:
 
 site_details:

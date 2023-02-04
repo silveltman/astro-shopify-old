@@ -16,7 +16,7 @@
   on:click
   {href}
   {disabled}
-  class="text-center rounded-full font-medium border
+  class="inline-flex items-center justify-center text-center rounded-full font-medium border
 
     {disabled && '!pointer-events-none !opacity-50 !border-neutral'}
           

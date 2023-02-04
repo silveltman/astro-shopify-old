@@ -16,7 +16,7 @@
   on:click
   {href}
   {disabled}
-  class="text-center rounded-full font-medium shadow-md shadow-neutral-500/10
+  class="inline-flex items-center justify-center text-center rounded-full font-medium shadow-md shadow-neutral-500/10
 
     {disabled && '!pointer-events-none !opacity-50 !bg-neutral'}
 

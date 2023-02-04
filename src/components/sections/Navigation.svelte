@@ -1,8 +1,8 @@
 <script lang="ts">
-  import Logo from '@components/micro/content/Logo.svelte'
-  import Container from '@components/layout/Container.svelte'
-  import Link from '@components/micro/navigation/Link.svelte'
-  import ButtonIcon from '@components/micro/inputs/button/Icon.svelte'
+  import Logo from '@components/atoms/Logo.svelte'
+  import Container from '@components/layouts/Container.svelte'
+  import Link from '@components/atoms/Link.svelte'
+  import ButtonIcon from '@components/atoms/ButtonIcon.svelte'
 
   const links = [
     { href: '#', text: 'Women' },
@@ -38,7 +38,7 @@
           {/each}
         </div>
 
-        <div class="flex ml-auto gap-x">
+        <div class="flex ml-auto gap-x-sm">
           <ButtonIcon
             theme="dark"
             icon="search"
